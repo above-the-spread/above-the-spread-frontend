@@ -36,7 +36,9 @@ export default function RootLayout({
             <header className="flex h-10 shrink-0 items-center justify-between gap-2 border-b px-4">
               <div className="flex items-center gap-2">
                 <SidebarTrigger className="-ml-1 text-primary-active hover:text-primary-active" />
-                <h1 className="text-2xl font-black text-primary-active">ATS</h1>
+                <h1 className="text-2xl font-black italic text-primary-active">
+                  ATS
+                </h1>
               </div>
               <Avatar>
                 <AvatarImage src="https://github.com/shadcn.png" />

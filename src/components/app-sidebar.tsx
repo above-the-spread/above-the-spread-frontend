@@ -84,7 +84,7 @@ export function AppSidebar() {
     <Sidebar collapsible="icon">
       <SidebarContent className="bg-primary ">
         <SidebarGroup>
-          <SidebarGroupLabel className="text-neutral-800">
+          <SidebarGroupLabel className="text-mygray font-bold">
             Sports Management
           </SidebarGroupLabel>
           <SidebarGroupContent>
@@ -99,14 +99,14 @@ export function AppSidebar() {
                   >
                     <Link href={item.url}>
                       {item.icon === Icon ? (
-                        <Icon className="text-gray-200" {...item.iconProps} />
+                        <Icon className="text-mygray" {...item.iconProps} />
                       ) : (
                         React.createElement(item.icon, {
                           size: 16,
-                          className: "text-gray-200",
+                          className: "text-mygray",
                         })
                       )}
-                      <span className="text-gray-200">{item.title}</span>
+                      <span className="text-mygray">{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>

@@ -12,9 +12,12 @@
 
     --card-foreground: 0 0% 3.9%;
 
-    --primary: 170 70% 32%;
+    --primary: 184, 72%, 27%;
+    /* --primary: 170, 70%, 32%; */
 
     --primary-active: 196 75% 22%;
+
+    --mygray: 210 40% 90.1%;
 
     --popover: 0 0% 100%;
 

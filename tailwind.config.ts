@@ -24,6 +24,9 @@ export default {
           DEFAULT: "hsl(var(--primary))",
           active: "hsl(var(--primary-active))",
         },
+        mygray: {
+          DEFAULT: "hsl(var(--mygray))",
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",

@@ -20,10 +20,13 @@ import {
 } from "@/components/ui/sidebar";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { mainItems, tournaments, leagues } from "@/data/nav";
+import { ModeToggle } from "@/components/mode-toggle";
+import { useTheme } from "next-themes";
 
 export function AppSidebar() {
   const pathname = usePathname();
   const { state } = useSidebar();
+  const { setTheme, theme } = useTheme();
 
   return (
     <Sidebar collapsible="icon">
@@ -160,7 +163,22 @@ export function AppSidebar() {
         {/* User Avatar Section */}
         <SidebarGroup className="mt-auto">
           <SidebarGroupContent>
-            <SidebarMenu>
+            <SidebarMenu className="flex flex-col gap-2">
+              <SidebarMenuItem>
+                <SidebarMenuButton
+                  className={`hover:bg-primary-active  active:bg-primary-active
+                flex  items-center ${
+                  state === "expanded" ? "justify-start" : "justify-center"
+                }
+                `}
+                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                >
+                  <ModeToggle />
+                  {state === "expanded" && (
+                    <span className="text-mygray">Theme</span>
+                  )}
+                </SidebarMenuButton>
+              </SidebarMenuItem>
               <SidebarMenuItem>
                 {state === "collapsed" ? (
                   <SidebarMenuButton className=" flex justify-center items-center p-2   hover:bg-primary-active  active:bg-primary-active">

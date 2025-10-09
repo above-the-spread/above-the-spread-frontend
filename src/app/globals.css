@@ -98,7 +98,8 @@
 
     --accent-foreground: 0 0% 98%;
 
-    --primary: 170 70% 32%;
+    --primary: 184, 72%, 27%;
+    /* --primary: 170, 70%, 32%; */
 
     --primary-active: 196 75% 22%;
 

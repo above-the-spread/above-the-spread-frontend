@@ -3,6 +3,7 @@
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { usePathname } from "next/navigation";
 import { mainItems, tournaments, leagues } from "@/data/nav";
+import { ModeToggle } from "@/components/mode-toggle";
 
 export default function Header() {
   const pathname = usePathname();
@@ -13,9 +14,9 @@ export default function Header() {
   const pageTitle = currentItem?.title || "Home";
 
   return (
-    <header className="md:hidden bg-primary flex items-center gap-4 border-b px-1 py-1">
+    <header className="md:hidden bg-primary flex items-center gap-4  px-2 py-1">
       <SidebarTrigger />
-      <h1 className="text-lg font-black text-mygray">{pageTitle}</h1>
+      <h1 className="text-lg font-black text-mygray flex-1">{pageTitle}</h1>
     </header>
   );
 }

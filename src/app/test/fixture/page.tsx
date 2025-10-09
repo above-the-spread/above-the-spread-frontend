@@ -9,17 +9,20 @@ async function getFixtures() {
   }
 
   // Get fixtures for a specific date (Free plan: 2025-09-29 to 2025-10-01)
-  const date = "2025-09-29"; // Must be within free plan range
+  const date = "2025-10-10"; // Must be within free plan range
   const season = "2025"; // Current season
-  const league = "145"; // Premier League
+  const league = "72"; // Premier League
 
-  const response = await fetch(`${apiUrl}/fixtures?date=${date}`, {
-    headers: {
-      "x-rapidapi-key": apiKey,
-      "x-rapidapi-host": "v3.football.api-sports.io",
-    },
-    next: { revalidate: 300 }, // Cache for 5 minutes
-  });
+  const response = await fetch(
+    `${apiUrl}/fixtures?date=${date}&league=${league}&season=${season}`,
+    {
+      headers: {
+        "x-rapidapi-key": apiKey,
+        "x-rapidapi-host": "v3.football.api-sports.io",
+      },
+      next: { revalidate: 300 }, // Cache for 5 minutes
+    }
+  );
 
   if (!response.ok) {
     throw new Error(

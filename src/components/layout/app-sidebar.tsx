@@ -166,7 +166,7 @@ export function AppSidebar() {
             <SidebarMenu className="flex flex-col gap-2">
               <SidebarMenuItem>
                 <SidebarMenuButton
-                  className={`hover:bg-primary-active  active:bg-primary-active
+                  className={`hover:bg-primary-active   active:bg-primary-active
                 flex  items-center ${
                   state === "expanded" ? "justify-start" : "justify-center"
                 }
@@ -175,7 +175,7 @@ export function AppSidebar() {
                 >
                   <ModeToggle />
                   {state === "expanded" && (
-                    <span className="text-mygray">Theme</span>
+                    <span className="text-neutral-300/50">Theme</span>
                   )}
                 </SidebarMenuButton>
               </SidebarMenuItem>

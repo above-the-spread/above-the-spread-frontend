@@ -18,7 +18,7 @@ export function ModeToggle() {
   }
 
   return (
-    <div className="toggle">
+    <div className="toggle text-neutral-300/40 ">
       <div
         className="icon icon--moon"
         style={{
@@ -45,7 +45,7 @@ export function ModeToggle() {
       </div>
 
       <div
-        className="icon icon--sun"
+        className="icon icon--sun "
         style={{
           transform:
             theme === "dark"

@@ -16,7 +16,7 @@
 .icon {
   grid-column: 1 / 1;
   grid-row: 1 / 1;
-  transition: all 400ms ease-in-out;
+  transition: transform 500ms;
   line-height: 0.1;
   width: 20px;
   height: 20px;
@@ -24,23 +24,9 @@
 
 .icon--moon {
   color: #b4b4b4;
-  opacity: 1;
-  transform: scale(1);
 }
 
 .icon--sun {
   color: #ffa500;
-  opacity: 0;
-  transform: scale(0);
   scale: 1.1;
-}
-
-#switch:checked + .icon--moon {
-  opacity: 0;
-  transform: scale(0);
-}
-
-#switch:checked ~ .icon--sun {
-  opacity: 1;
-  transform: scale(1);
 }

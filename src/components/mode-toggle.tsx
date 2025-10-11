@@ -22,8 +22,11 @@ export function ModeToggle() {
       <div
         className="icon icon--moon"
         style={{
-          opacity: theme === "dark" ? 0 : 1,
-          transform: theme === "dark" ? "scale(0)" : "scale(1)",
+          transform:
+            theme === "dark"
+              ? "rotate(360deg) scale(0)"
+              : "rotate(0deg) scale(1)",
+          transitionDelay: theme === "dark" ? "0ms" : "200ms",
         }}
       >
         <svg
@@ -44,8 +47,11 @@ export function ModeToggle() {
       <div
         className="icon icon--sun"
         style={{
-          opacity: theme === "dark" ? 1 : 0,
-          transform: theme === "dark" ? "scale(1)" : "scale(0)",
+          transform:
+            theme === "dark"
+              ? "scale(1) rotate(360deg)"
+              : "scale(0) rotate(0deg)",
+          transitionDelay: theme === "dark" ? "200ms" : "0ms",
         }}
       >
         <svg
